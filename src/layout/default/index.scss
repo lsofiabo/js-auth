@@ -1,6 +1,21 @@
+@use '../../style/' as s;
 
+:root {
+	background-color: s.color('dark');
+}
+
+html {
+	min-height: 100%;
+	padding: 64px 0;
+}
 
 body {
 	font-family: 'Roboto', sans-serif;
-	padding: 100px;
+
+	max-width: 420px;
+	width: 100%;
+	margin: auto;
+	height: 100%;
+
+	background-color: s.color('background');
 }
