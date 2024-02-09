@@ -1,0 +1,5 @@
+@use '../../style/' as s;
+
+.icon-back {
+	@include s.clickable;
+}

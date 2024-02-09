@@ -1,1 +1,8 @@
 @use '../../style' as s;
+@use '../../style/form.scss';
+
+.page__section {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(6);
+}

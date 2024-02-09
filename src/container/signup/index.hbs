@@ -1,3 +1,20 @@
 <div class="page page--background">
-	Test
+	<header>
+		{{> back-button}}
+	</header>
+	<form class="page__section">
+		<h1 class="page__title">Реєстрація</h1>
+
+		<div class="form">
+			{{> field action="signupForm.change" name="name" label="Ім'я" type="text" placeholder="Ваше ім'я" }}
+			{{> field-password action='signupForm.change' name="password" label="Пароль" }}
+			{{> field-select action='signupForm.change' name="role" label="Роль" placeholder="Виберіть роль" list=data.role }}
+			{{> field-checkbox action='signupForm.change' name="privacypolicy" label="Я умовами обробки персональних даних" }}
+		</div>
+
+		<button onclick="signupForm.submit()" class="button" type="button">Зареєструватися</button>
+
+		<span class="alert alert-error"> Помилка </span>
+
+	</form>
 </div>

@@ -1,0 +1,23 @@
+@use '../style/' as s;
+
+.button {
+	@include s.clickable;
+
+	border-radius: s.space(3);
+	padding: s.space(4);
+	color: s.color(white);
+	background-color: s.color('main');
+}
+
+.alert {
+	color: s.color(red);
+	border: 1px solid s.color(red);
+	border-radius: s.space(3);
+	padding: s.space(3) s.space(4);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(3);
+}

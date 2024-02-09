@@ -1,0 +1,31 @@
+@use '../../style' as s;
+
+.field--checkbox {
+	.field__wrapper {
+		border: 1px solid s.color('box');
+		border-radius: s.space(3);
+		padding: s.space(4);
+		display: flex;
+		align-items: center;
+		gap: s.space(2);
+		&[active] .field__icon {
+			background-image: url('/svg/checkbox-active.svg');
+		}
+	}
+}
+
+.field__label--checkbox {
+	font-size: 16px;
+	color: s.color('dark');
+}
+
+.field__icon {
+	display: block;
+	width: 14px;
+	height: 14px;
+
+	background-image: url('/svg/checkbox.svg');
+	background-size: 12px 12px;
+	background-repeat: no-repeat;
+	background-position: center;
+}

@@ -1,0 +1,29 @@
+@use '../../style/' as s;
+
+
+
+.field--select {
+	.field__select {
+		border: 1px solid s.color('box');
+		background: s.color('background');
+		padding: s.space(4);
+		border-radius: s.space(3);
+
+		display: flex;
+		gap: s.space(2);
+		align-items: center;
+
+		cursor: pointer;
+		transition: border-color 0.2s ease-in-out;
+		position: relative;
+	}
+
+	.field__value {
+		font-size: 14px;
+		color: s.color('dark');
+
+		&--placeholder {
+			color: s.color('light');
+		}
+	}
+}

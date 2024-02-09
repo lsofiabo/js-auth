@@ -8,7 +8,13 @@ const User = require('../class/user').User;
 router.get('/signup', function (req, res) {
     res.render('signup', {
         name: 'signup',
-        component: [],
+        component: [
+            'back-button',
+            'field',
+            'field-password',
+            'field-checkbox',
+            'field-select',
+        ],
 
         title: 'Sign Up',
 
