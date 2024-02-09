@@ -6,10 +6,11 @@
 		<h1 class="page__title">Реєстрація</h1>
 
 		<div class="form">
-			{{> field action="signupForm.change" name="name" label="Ім'я" type="text" placeholder="Ваше ім'я" }}
+			{{> field action="signupForm.change" name="email" label="Ел. адреса" type="email" placeholder="fly1prod@gmail.com" }}
 			{{> field-password action='signupForm.change' name="password" label="Пароль" }}
+			{{> field-password action='signupForm.change' name="password2" label="Пароль ще раз" }}
 			{{> field-select action='signupForm.change' name="role" label="Роль" placeholder="Виберіть роль" list=data.role }}
-			{{> field-checkbox action='signupForm.change' name="privacypolicy" label="Я умовами обробки персональних даних" }}
+			{{> field-checkbox action='signupForm.change' name="privacypolicy" label="Я погоджуюся з правилами сервісу" }}
 		</div>
 
 		<button onclick="signupForm.submit()" class="button" type="button">Зареєструватися</button>
