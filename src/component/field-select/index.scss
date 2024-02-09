@@ -26,4 +26,69 @@
 			color: s.color('light');
 		}
 	}
+
+	.field__container {
+		display: grid;
+		position: relative;
+
+		&:hover {
+			.field__select {
+				border-color: s.color(gray);
+			}
+		}
+	}
+
+	.field__label--select {
+		font-size: 16px;
+		color: s.color('dark');
+	}
+
+	.field__icon--select {
+		position: absolute;
+		right: s.space(4);
+		top: calc(50% - 7px);
+		background-image: url('/svg/select.svg');
+	}
+
+	.field__list {
+		padding: s.space(4);
+		display: none;
+		border: 1px solid s.color('box');
+		border-radius: s.space(3);
+		overflow: scroll;
+		background: s.color('background');
+		max-height: 160px;
+		z-index: 1;
+
+		.field__option {
+			@include s.clickable();
+
+			&:not(:last-of-type) {
+				padding-bottom: s.space(4);
+			}
+
+			transition: color 0.2s ease-in-out;
+
+			&[active] {
+				color: s.color('main');
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+
+		&[active] {
+			display: block;
+		}
+
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 100%;
+	}
+
+	.field__input--disabled {
+		display: none;
+	}
 }

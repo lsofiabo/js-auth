@@ -24,8 +24,11 @@
 	width: 14px;
 	height: 14px;
 
-	background-image: url('/svg/checkbox.svg');
 	background-size: 12px 12px;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.field__icon--checkbox {
+	background-image: url('/svg/checkbox.svg');
 }
